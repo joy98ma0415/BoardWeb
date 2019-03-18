@@ -78,7 +78,7 @@ namespace BoardWeb
         /// <param name="ContentTxt"></param>
         public void AddNews(string NewsType, string TitleStr, string NameStr, string ContentTxt)
         {
-            String SqlString = "insert NewsText (NameStr,NewsType,TitleStr,ContentTxt,DateTimeTxt) values ('" + NameStr + "','" + NewsType + "','" + TitleStr + "','" + ContentTxt + "','" + DateTime.Now.ToShortDateString() + "')";
+            String SqlString = string.Format("insert NewsText (NameStr,NewsType,TitleStr,ContentTxt,DateTimeTxt) values ('{0}',N'{1}',N'{2}',N'{3}','{4}')", NameStr, NewsType, TitleStr, ContentTxt, DateTime.Now.ToShortDateString()) ;
             ExecuteSqlWrite(SqlString);
         }
 

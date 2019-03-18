@@ -10,31 +10,33 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:Label ID="TopTxt" runat="server" Text="Label" Width="100%"></asp:Label><br />
-        <br />
-        <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AddNews.aspx">添加消息</asp:HyperLink>
-        &nbsp;
+        <div>
+            <asp:Label ID="TopTxt" runat="server" Text="Label" Width="100%"></asp:Label><br />
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AddNews.aspx">添加消息</asp:HyperLink>
+            &nbsp;
         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/MLogin.aspx">管理登入</asp:HyperLink><br />
-        <br />
-        <asp:GridView ID="NewsGrid" runat="server" AllowPaging="True" AutoGenerateColumns="False"
-            BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px"
-            CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" Width="100%" OnPageIndexChanging="NewsGrid_PageIndexChanging">
-            <FooterStyle BackColor="#CCCC99" />
-            <Columns>
-                <asp:BoundField DataField="NewsType" HeaderText="消息分類" />
-                <asp:BoundField DataField="TitleStr" HeaderText="消息標題" />
-                <asp:BoundField DataField="NameStr" HeaderText="發布人" />
-                <asp:BoundField DataField="DateTimeTxt" HeaderText="發布日期" />
-            </Columns>
-            <RowStyle BackColor="#F7F7DE" Font-Size="Smaller" />
-            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-            <AlternatingRowStyle BackColor="White" />
-        </asp:GridView>
-    </div>
+            &nbsp;
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="https://portfoliowebapplication.azurewebsites.net/Default">回作品集首頁</asp:HyperLink><br />
+            <br />
+            <asp:GridView ID="NewsGrid" runat="server" AllowPaging="True" AutoGenerateColumns="False"
+                BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px"
+                CellPadding="4" ForeColor="Black" GridLines="Vertical" PageSize="5" Width="100%" OnPageIndexChanging="NewsGrid_PageIndexChanging">
+                <FooterStyle BackColor="#CCCC99" />
+                <Columns>
+                    <asp:BoundField DataField="NewsType" HeaderText="消息分類" />
+                    <asp:BoundField DataField="TitleStr" HeaderText="消息標題" />
+                    <asp:BoundField DataField="NameStr" HeaderText="發布人" />
+                    <asp:BoundField DataField="DateTimeTxt" HeaderText="發布日期" />
+                </Columns>
+                <RowStyle BackColor="#F7F7DE" Font-Size="Smaller" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <AlternatingRowStyle BackColor="White" />
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>
